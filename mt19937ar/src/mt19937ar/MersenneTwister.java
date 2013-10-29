@@ -3,7 +3,7 @@
  * 
  *  Mersenne Twister with improved initialization (2002)
  *  http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/mt.html
- *  
+ *  http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/MT2002/mt19937ar.html
  */
 // = 移植元ラインセンス =======================================================
 // ======================================================================
