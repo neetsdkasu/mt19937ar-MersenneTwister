@@ -1,6 +1,5 @@
 package hoge;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintStream;
 
@@ -13,7 +12,7 @@ public class Hoge {
 //		PrintStream out = System.out;
 		PrintStream out = new PrintStream("test.out");
 		
-		// mt19937ar.out ”äŠr—po—Í
+		// mt19937ar.out ï¿½ï¿½rï¿½pï¿½oï¿½ï¿½
 	    int i;
 	    long[] init= {0x123, 0x234, 0x345, 0x456};
 	    int length = 4;
@@ -30,7 +29,9 @@ public class Hoge {
 	    for (i = 0; i < 1000; i++) {
 	      out.printf("%10.8f ", rand.genrand_real2());
 	      if (i % 5 == 4) out.println();
-	    }		
+	    }
+	    
+	    out.close();
 	}
 
 }
