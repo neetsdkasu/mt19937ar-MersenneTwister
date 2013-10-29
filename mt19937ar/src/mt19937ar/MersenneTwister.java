@@ -1,5 +1,5 @@
 /*
- *  疑似乱数生成機 移植
+ *  疑似乱数生成機  移植  
  * 
  *  Mersenne Twister with improved initialization (2002)
  *  http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/mt.html
@@ -91,7 +91,7 @@ public class MersenneTwister {
 
 	/* initializes state[N] with a seed */
 	public void init_genrand(long seed) {
-		this.seed = seed;
+		this.seed = seed & 0xffffffffL;
 		state[0] = seed & 0xffffffffL;
 		for (int j = 1; j < MersenneTwister.N; j++) {
 			state[j] = (1812433253L * (state[j - 1] ^ (state[j - 1] >> 30)) + j);
