@@ -1,11 +1,11 @@
-package hoge;
+
 
 import java.io.IOException;
 import java.io.PrintStream;
 
 import mt19937ar.MersenneTwister;
 
-public class Hoge {
+public class Test {
 
 	public static void main(String[] args) throws IOException {
 		MersenneTwister rand = new MersenneTwister();
