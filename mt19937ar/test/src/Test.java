@@ -12,7 +12,7 @@ public class Test {
 //		PrintStream out = System.out;
 		PrintStream out = new PrintStream("test.out");
 		
-		// mt19937ar.out ��r�p�o��
+		// mt19937ar.out
 	    int i;
 	    long[] init= {0x123, 0x234, 0x345, 0x456};
 	    int length = 4;
