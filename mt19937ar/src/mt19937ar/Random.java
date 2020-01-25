@@ -26,7 +26,7 @@ public class Random extends java.util.Random {
 	public synchronized void setSeed(long seed) {
 		super.setSeed(seed);
 		if (mt == null) {
-			return; // java.util.Randomのコンストラクターによって呼ばれる
+			return; // call by super class (java.util.Random) constructor
 		}
 		mt.init_genrand(seed);
 	}
