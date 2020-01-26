@@ -32,7 +32,7 @@ public class TestRandom {
 			}
 
 			long[] init = { 0x123, 0x234, 0x345, 0x456 };
-			rand.setSeed(init);
+			rand = new Random(init);
 
 			for (int i = 0; i < 100; i++) {
 				out.printf("%d, ", rand.nextInt(100));

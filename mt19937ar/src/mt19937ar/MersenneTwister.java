@@ -71,7 +71,10 @@ public class MersenneTwister {
 				^ ((v & 1) == 1 ? MersenneTwister.MATRIX_A : 0);
 	}
 
-	private long[] state; /* the array for the state vector */
+	private long[] state = new long[MersenneTwister.N]; /*
+														 * the array for the
+														 * state vector
+														 */
 	private int left = 1;
 	private int initf = 0;
 	private int next = 0;
@@ -82,8 +85,15 @@ public class MersenneTwister {
 	}
 
 	public MersenneTwister(long seed) {
-		state = new long[MersenneTwister.N];
 		init_genrand(seed);
+	}
+
+	public MersenneTwister(long[] init_key, int key_length) {
+		init_by_array(init_key, key_length);
+	}
+
+	public MersenneTwister(long[] init_key) {
+		this(init_key, init_key.length);
 	}
 
 	public long getSeed() {
