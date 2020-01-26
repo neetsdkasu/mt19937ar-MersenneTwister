@@ -1,19 +1,19 @@
 package mt19937ar;
 
-public class Random extends java.util.Random {
+public class MTRandom extends java.util.Random {
 
 	final MersenneTwister mt;
 
-	public Random() {
+	public MTRandom() {
 		this(System.currentTimeMillis());
 	}
 
-	public Random(long seed) {
+	public MTRandom(long seed) {
 		super(0);
 		mt = new MersenneTwister(seed);
 	}
 
-	public Random(long[] init_key) {
+	public MTRandom(long[] init_key) {
 		super(0);
 		mt = new MersenneTwister();
 		mt.init_by_array(init_key, init_key.length);

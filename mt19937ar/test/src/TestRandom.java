@@ -1,6 +1,6 @@
 import java.io.PrintStream;
 
-import mt19937ar.Random;
+import mt19937ar.MTRandom;
 
 public class TestRandom {
 
@@ -8,7 +8,7 @@ public class TestRandom {
 
 		try (PrintStream out = new PrintStream("test_random.out")) {
 
-			Random rand = new Random(12345L);
+			MTRandom rand = new MTRandom(12345L);
 
 			for (int i = 0; i < 100; i++) {
 				out.printf("%d, ", rand.nextInt(100));
@@ -32,7 +32,7 @@ public class TestRandom {
 			}
 
 			long[] init = { 0x123, 0x234, 0x345, 0x456 };
-			rand = new Random(init);
+			rand = new MTRandom(init);
 
 			for (int i = 0; i < 100; i++) {
 				out.printf("%d, ", rand.nextInt(100));
